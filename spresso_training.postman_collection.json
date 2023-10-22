@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "fdde61cd-e394-48cc-bbfc-344774643741",
+		"name": "0_novatech_training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "295028"
+	},
+	"item": [
+		{
+			"name": "/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{novatech-api}}/products?attributes=name&attributes=description&limit=1&offset=0",
+					"host": [
+						"{{novatech-api}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "attributes",
+							"value": "name"
+						},
+						{
+							"key": "attributes",
+							"value": "description"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{novatech-api}}/products/1",
+					"host": [
+						"{{novatech-api}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{novatech-api}}/products/3",
+					"host": [
+						"{{novatech-api}}"
+					],
+					"path": [
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dish Towel\",\n    \"sku\": \"KW23 MZQW 39MG Y2Q0 ROSQ DAKZ W98C S9\",\n    \"description\": \"Basic Industries\",\n    \"price\": 728.32\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{novatech-api}}/products",
+					"host": [
+						"{{novatech-api}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"smart tv 123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{novatech-api}}/products/4",
+					"host": [
+						"{{novatech-api}}"
+					],
+					"path": [
+						"products",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_name\": \"Sandy Cufley\",\n    \"address\": \"PO Box 12155\",\n    \"items\": [ { \n        \"product_id\": 1,\n        \"quantity\": 2\n    },\n    { \n        \"product_id\": 2,\n        \"quantity\": 1\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{novatech-api}}/orders",
+					"host": [
+						"{{novatech-api}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{novatech-api}}/orders?attributes=order_id&attributes=total_price&limit=1&offset=0",
+					"host": [
+						"{{novatech-api}}"
+					],
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "attributes",
+							"value": "order_id"
+						},
+						{
+							"key": "attributes",
+							"value": "total_price"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/orders/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{novatech-api}}/orders/1",
+					"host": [
+						"{{novatech-api}}"
+					],
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,6 +1,9 @@
 const { DB_NAME, DB_USERNAME, DB_PASSWORD, DB_HOSTNAME, DB_PORT, DB_DIALECT } = process.env;
 
 const Sequelize = require('sequelize');
+
+//TODO add support for non relational dbs like mongo based on DB_DIALECT
+
 const dbInstance = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
     host: DB_HOSTNAME,
     port: DB_PORT,

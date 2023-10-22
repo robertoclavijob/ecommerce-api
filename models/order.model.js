@@ -1,5 +1,7 @@
 const { DataTypes } = require("sequelize");
 
+//TODO add support for non relational dbs like mongo based on DB_DIALECT
+
 module.exports = (sequelizeInstance) => {
     const Order = sequelizeInstance.define('order', {
         order_id: {

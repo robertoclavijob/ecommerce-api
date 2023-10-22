@@ -12,7 +12,7 @@ module.exports = {
     },
     findOne: async (id) => {
         const product = await Product.findOne({
-            where: { productId: id }
+            where: { product_id: id }
         });
         return product;
     },
@@ -20,13 +20,13 @@ module.exports = {
         const newProduct = await Product.create(product);
         return newProduct
     },
-    update: async (productId, product) => {
-        const updatedProduct = await Product.update(product, { where: { productId: productId } });
+    update: async (id, product) => {
+        const updatedProduct = await Product.update(product, { where: { product_id: id } });
         return updatedProduct;
     },
     remove: async (id) => {
         await Product.destroy({
-            where: { productId: id },
+            where: { product_id: id },
             rejectOnEmpty: true
         });
     }
